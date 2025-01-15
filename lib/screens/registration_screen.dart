@@ -19,10 +19,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // ignore: sized_box_for_whitespace
-            Container(
-              height: 200,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 200,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             const SizedBox(
               height: 48,

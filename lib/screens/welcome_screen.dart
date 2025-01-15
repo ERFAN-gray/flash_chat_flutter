@@ -24,10 +24,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // ignore: sized_box_for_whitespace
-                  Container(
-                    height: 60,
-                    child: Image.asset('images/logo.png'),
+                  Hero(
+                    tag: 'logo',
+                    child: Container(
+                      height: 60,
+                      child: Image.asset('images/logo.png'),
+                    ),
                   ),
                   const Text(
                     "Flash Chat",
