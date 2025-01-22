@@ -11,3 +11,18 @@ const kMessageTextFieldDecoration = InputDecoration(
 
 const kSendButtonTextStyle = TextStyle(
     color: Colors.lightBlueAccent, fontWeight: FontWeight.bold, fontSize: 18);
+
+InputDecoration? kTextFieldDecoration(
+    {required Color color, required String hintText}) {
+  return InputDecoration(
+      hintText: hintText,
+      contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(32))),
+      enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: color, width: 1.0),
+          borderRadius: const BorderRadius.all(Radius.circular(32))),
+      focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: color, width: 2.0),
+          borderRadius: const BorderRadius.all(Radius.circular(32))));
+}
