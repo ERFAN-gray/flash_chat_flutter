@@ -1,0 +1,2 @@
+D:/Flash Chat/flash_chat_flutter/android/app/.cxx/Debug/2div2n2s/x86/CMakeFiles/edit_cache.dir
+D:/Flash Chat/flash_chat_flutter/android/app/.cxx/Debug/2div2n2s/x86/CMakeFiles/rebuild_cache.dir
