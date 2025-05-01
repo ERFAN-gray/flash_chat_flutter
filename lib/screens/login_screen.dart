@@ -11,6 +11,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  String? email;
+  String? password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,12 +34,20 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 48,
             ),
             TextField(
-                onChanged: (value) {},
+                textAlign: TextAlign.center,
+                keyboardType: TextInputType.emailAddress,
+                onChanged: (value) {
+                  email = value;
+                },
                 decoration: kTextFieldDecoration(
                     color: Colors.lightBlue, hintText: "Enter your Email")),
             const SizedBox(height: 8),
             TextField(
-                onChanged: (value) {},
+                textAlign: TextAlign.center,
+                obscureText: true,
+                onChanged: (value) {
+                  password = value;
+                },
                 decoration: kTextFieldDecoration(
                     color: Colors.lightBlue, hintText: "Enter your password")),
             const SizedBox(

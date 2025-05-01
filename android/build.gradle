@@ -1,18 +1,37 @@
+
 allprojects {
     repositories {
         google()
         mavenCentral()
     }
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = '11'
+        targetCompatibility = '11'
+    }
 }
+
 
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
+//the lines below are the error you should take care of it............
+// [{
+// 	"resource": "/D:/Flash Chat/flash_chat_flutter/android/build.gradle",
+// 	"owner": "_generated_diagnostic_collection_name_#5",
+// 	"code": "0",
+// 	"severity": 8,
+// 	"message": "The supplied phased action failed with an exception.\r\nBuild completed with 1 failures.\r\nBUG! exception in phase 'semantic analysis' in source unit '_BuildScript_' Unsupported class file major version 67\r\nUnsupported class file major version 67",
+// 	"source": "Java",
+// 	"startLineNumber": 1,
+// 	"startColumn": 1,
+// 	"endLineNumber": 1,
+// 	"endColumn": 1
+// }]
